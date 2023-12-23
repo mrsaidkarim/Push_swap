@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   split.c                                            :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skarim <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 19:23:00 by skarim            #+#    #+#             */
-/*   Updated: 2023/12/18 16:28:27 by skarim           ###   ########.fr       */
+/*   Updated: 2023/12/23 15:53:13 by skarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ static char	*ft_word(char *str, char c)
 	return (s);
 }
 
-static char	**ft_free(char **s, int n)
+static char	**ft_free_split(char **s, int n)
 {
 	int	i;
 
@@ -72,7 +72,9 @@ char	**ft_split(char *s, char c)
 	char	**res;
 	int		i;
 	int		count;
+	char	*tmp;
 
+	tmp = s;
 	count = ft_count(s, c);
 	res = (char **)malloc(sizeof(char *) * (count + 1));
 	if (!res)
@@ -85,23 +87,11 @@ char	**ft_split(char *s, char c)
 			s++;
 		res[i] = ft_word(s, c);
 		if (res[i] == NULL)
-			return (ft_free(res, i));
+			return (ft_free_split(res, i));
 		while (*s && *s != c)
 			s++;
 		i++;
 	}
+	free(tmp);
 	return (res);
 }
-
-// #include <stdio.h>
-// int main(int argc, char **argv)
-// {
-// 	char **res;
-// 	res = ft_split(argv[1], ' ');
-// 	while (*res)
-// 	{
-// 		printf("|%s|", *res);
-// 		res++;
-// 	}
-// 	return (0);
-// }
