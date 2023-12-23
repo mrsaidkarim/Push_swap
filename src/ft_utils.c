@@ -6,7 +6,7 @@
 /*   By: skarim <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 17:02:03 by skarim            #+#    #+#             */
-/*   Updated: 2023/12/19 17:47:59 by skarim           ###   ########.fr       */
+/*   Updated: 2023/12/20 14:25:11 by skarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,17 @@ int	ft_strlen(char *str)
 		len++;
 	}
 	return (len);
+}
+
+void	ft_free(char **s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		free(s[i]);
+		i++;
+	}
+	free(s);
 }
