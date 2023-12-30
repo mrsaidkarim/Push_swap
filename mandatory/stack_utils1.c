@@ -6,11 +6,11 @@
 /*   By: skarim <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 19:04:11 by skarim            #+#    #+#             */
-/*   Updated: 2023/12/23 10:50:41 by skarim           ###   ########.fr       */
+/*   Updated: 2023/12/30 16:05:08 by skarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../Include/push_swap.h"
 
 int	ft_stack_len(t_stack_node *s)
 {
@@ -54,7 +54,7 @@ t_stack_node	*smallest(t_stack_node *a)
 	min = INT_MAX;
 	while (a)
 	{
-		if (a->value <= min)
+		if (a->value < min)
 		{
 			min = a->value;
 			min_node = a;
@@ -76,7 +76,7 @@ void	set_target_node(t_stack_node *a, t_stack_node *b)
 		tmp = a;
 		while (tmp)
 		{
-			if (b->value < tmp->value && tmp->value <= cbv)
+			if (b->value < tmp->value && tmp->value < cbv)
 			{
 				cbv = tmp->value;
 				closest_bigger = tmp;

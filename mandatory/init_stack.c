@@ -6,11 +6,11 @@
 /*   By: skarim <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 16:36:35 by skarim            #+#    #+#             */
-/*   Updated: 2023/12/23 10:49:19 by skarim           ###   ########.fr       */
+/*   Updated: 2023/12/30 16:04:41 by skarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../Include/push_swap.h"
 
 void	ft_add(t_stack_node **stk, int n)
 {
@@ -19,6 +19,8 @@ void	ft_add(t_stack_node **stk, int n)
 
 	node = (t_stack_node *)malloc(sizeof(t_stack_node));
 	node->value = n;
+	node->f = 0;
+	node->lis = 1;
 	node->next = NULL;
 	if (*stk == NULL)
 	{
@@ -49,7 +51,7 @@ void	ft_free_stack(t_stack_node **a, char **args)
 	}
 	*a = NULL;
 	ft_free(args);
-	exit(1);
+	exit(-1);
 }
 
 void	ft_init(t_stack_node **a, char **args)
@@ -58,7 +60,7 @@ void	ft_init(t_stack_node **a, char **args)
 
 	i = 0;
 	while (args[i])
-		ft_add(a, atoi(args[i++]));
+		ft_add(a, ft_atoi(args[i++]));
 	if (ft_dup(*a))
 	{
 		ft_putstr("Error\n");
@@ -66,6 +68,7 @@ void	ft_init(t_stack_node **a, char **args)
 	}
 	else
 		ft_free(args);
+	ft_set_index(*a);
 }
 
 void	free_stack(t_stack_node **s)

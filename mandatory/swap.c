@@ -6,18 +6,18 @@
 /*   By: skarim <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 16:23:21 by skarim            #+#    #+#             */
-/*   Updated: 2023/12/22 16:35:19 by skarim           ###   ########.fr       */
+/*   Updated: 2023/12/30 16:05:17 by skarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../Include/push_swap.h"
 
 void	swap(t_stack_node **s)
 {
 	t_stack_node	*tmp1;
 	t_stack_node	*tmp2;
 
-	if (*s)
+	if (*s && (*s)->next)
 	{
 		tmp1 = *s;
 		tmp2 = (*s)->next;

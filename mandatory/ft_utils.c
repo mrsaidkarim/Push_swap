@@ -6,11 +6,11 @@
 /*   By: skarim <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 17:02:03 by skarim            #+#    #+#             */
-/*   Updated: 2023/12/23 16:39:42 by skarim           ###   ########.fr       */
+/*   Updated: 2023/12/30 16:04:36 by skarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../Include/push_swap.h"
 
 void	ft_putstr(char *str)
 {
@@ -19,7 +19,7 @@ void	ft_putstr(char *str)
 	i = 0;
 	while (str[i])
 	{
-		write(1, &str[i], 1);
+		write(2, &str[i], 1);
 		i++;
 	}
 }
@@ -47,16 +47,18 @@ long long	ft_atoi(char *s)
 	return (n * sign);
 }
 
-int	ft_strlen(char *str)
+int	ft_strlen(char *s)
 {
-	int	len;
+	int	i;
 
-	len = 0;
-	while (str[len])
+	i = 0;
+	if (!s)
+		return (0);
+	while (s[i] != '\0')
 	{
-		len++;
+		i++;
 	}
-	return (len);
+	return (i);
 }
 
 void	ft_free(char **s)

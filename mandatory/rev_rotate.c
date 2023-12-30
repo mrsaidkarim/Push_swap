@@ -6,11 +6,11 @@
 /*   By: skarim <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 17:46:05 by skarim            #+#    #+#             */
-/*   Updated: 2023/12/22 16:37:32 by skarim           ###   ########.fr       */
+/*   Updated: 2023/12/30 16:04:56 by skarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../Include/push_swap.h"
 
 void	rev_rotate(t_stack_node **s)
 {

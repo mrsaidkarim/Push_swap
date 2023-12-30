@@ -6,11 +6,11 @@
 /*   By: skarim <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 17:46:55 by skarim            #+#    #+#             */
-/*   Updated: 2023/12/20 19:15:04 by skarim           ###   ########.fr       */
+/*   Updated: 2023/12/30 16:04:24 by skarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../Include/push_swap.h"
 
 int	ft_arg_checker(char *s)
 {

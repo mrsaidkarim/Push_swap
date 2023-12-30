@@ -6,11 +6,11 @@
 /*   By: skarim <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 19:23:00 by skarim            #+#    #+#             */
-/*   Updated: 2023/12/23 15:53:13 by skarim           ###   ########.fr       */
+/*   Updated: 2023/12/30 16:04:32 by skarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../Include/push_swap.h"
 
 static int	ft_count(char *s, char c)
 {

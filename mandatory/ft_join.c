@@ -6,11 +6,11 @@
 /*   By: skarim <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 11:04:38 by skarim            #+#    #+#             */
-/*   Updated: 2023/12/19 17:47:46 by skarim           ###   ########.fr       */
+/*   Updated: 2023/12/30 16:04:28 by skarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../Include/push_swap.h"
 
 char	*ft_join(char *s1, char *s2)
 {
